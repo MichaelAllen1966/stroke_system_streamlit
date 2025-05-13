@@ -20,8 +20,21 @@ params = {
 
 st.title('Simple stroke system model')
 
-# Add image
-st.image('images/system_1.png', caption='Simple Stroke System model', width=600)
+# Add a description
+st.write("""
+This is a simple stroke system model that simulates the flow of patients through a stroke system. The model includes the following components:
+- HASU: Hyper Acute Stroke Unit
+- ASU: Acute Stroke Unit
+- ESD: Early Supported Discharge
+         
+
+Patients are admitted to the HASU and then may be transferred to the ASU or ESD. Patients using ASU may also use ESD (which can change their time in the ASU). The model simulates the flow of patients through these components and generates a bed occupancy report and an audit report summary.
+- The length of stay (LOS) for each component is defined by a mean and a coefficient of variation (CV).
+- The model parameters can be adjusted using the sidebar.
+- The model is run by clicking the "Run model" button.
+- The model generates a bed occupancy report and an audit report summary.
+
+""")
 
 # Add a box to enter admissions_per_year
 st.sidebar.title("Model parameters")
@@ -39,8 +52,7 @@ params['los_esd_mean'] = st.sidebar.number_input('Mean LOS ESD', value=params['l
 params['los_esd_cv'] = st.sidebar.number_input('CV LOS ESD', value=params['los_esd_cv'])
 
 
-st.subheader('Load and run model')
-if st.button('Load and run model'):
+if st.button('Run model'):
     # Load the model with the parameters
     m = Model(params)
 
@@ -48,7 +60,12 @@ if st.button('Load and run model'):
     sim_duration = 365 # Duration after warm up
     m.run(warm_up, sim_duration)
 
-    st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
-    st.write(m.system.audit_report_summary)
+    # Create 2 columns for the outputs
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
+    with col2:
+        st.write(m.system.audit_report_summary)
 
 
