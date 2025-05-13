@@ -59,10 +59,32 @@ class Model:
         self.los_esd_cv = 1.0
 
 
-        # Initialize parameters by key,value in params
-        self.params = {}
-        for key, value in _params.items():
-            self.params[key] = value
+        # update parameters above with _params
+        if _params is not None:
+            if 'admissions_per_year' in _params:
+                self.admissions_per_year = _params['admissions_per_year']
+            if 'prop_hasu_using_asu' in _params:
+                self.prop_hasu_using_asu = _params['prop_hasu_using_asu']
+            if 'prop_hasu_using_esd_only' in _params:
+                self.prop_hasu_using_esd_only = _params['prop_hasu_using_esd_only']
+            if 'prop_asu_using_esd' in _params:
+                self.prop_asu_using_esd = _params['prop_asu_using_esd']
+            if 'los_hasu_mean' in _params:
+                self.los_hasu_mean = _params['los_hasu_mean']
+            if 'los_hasu_cv' in _params:
+                self.los_hasu_cv = _params['los_hasu_cv']
+            if 'los_asu_no_esd_mean' in _params:
+                self.los_asu_no_esd_mean = _params['los_asu_no_esd_mean']
+            if 'los_asu_no_esd_cv' in _params:
+                self.los_asu_no_esd_cv = _params['los_asu_no_esd_cv']
+            if 'los_asu_with_esd_mean' in _params:
+                self.los_asu_with_esd_mean = _params['los_asu_with_esd_mean']
+            if 'los_asu_with_esd_cv' in _params:
+                self.los_asu_with_esd_cv = _params['los_asu_with_esd_cv']
+            if 'los_esd_mean' in _params:
+                self.los_esd_mean = _params['los_esd_mean']
+            if 'los_esd_cv' in _params:
+                self.los_esd_cv = _params['los_esd_cv']
 
         
         # Calculate inter-arrival time
