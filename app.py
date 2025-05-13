@@ -45,14 +45,14 @@ Patients are admitted to the HASU and then may be transferred to the ASU or ESD.
 
 # Add a box to enter admissions_per_year
 st.sidebar.title("Model parameters")
-params['admissions_per_year'] = st.sidebar.number_input('Admissions per year', value=params['admissions_per_year'],step=50)
-params['prop_hasu_using_asu'] = st.sidebar.number_input('Proportion HASU using ASU', value=params['prop_hasu_using_asu'], step=0.05)
-params['prop_hasu_using_esd_only'] = st.sidebar.number_input('Proportion HASU using ESD only', value=params['prop_hasu_using_esd_only'], step=0.05)
-params['prop_asu_using_esd'] = st.sidebar.number_input('Proportion ASU using ESD', value=params['prop_asu_using_esd'], step=0.05)
-params['los_hasu_mean'] = st.sidebar.number_input('Mean LOS HASU', value=params['los_hasu_mean'], step=0.5)
-params['los_asu_no_esd_mean'] = st.sidebar.number_input('Mean LOS ASU no ESD', value=params['los_asu_no_esd_mean'], step=0.5)
-params['los_asu_with_esd_mean'] = st.sidebar.number_input('Mean LOS ASU with ESD', value=params['los_asu_with_esd_mean'], step=1)
-params['los_esd_mean'] = st.sidebar.number_input('Mean LOS ESD', value=params['los_esd_mean'],step=1)
+params['admissions_per_year'] = st.sidebar.number_input('Admissions per year', value=params['admissions_per_year'], step=50)
+params['prop_hasu_using_asu'] = st.sidebar.number_input('Proportion HASU using ASU', value=params['prop_hasu_using_asu'])
+params['prop_hasu_using_esd_only'] = st.sidebar.number_input('Proportion HASU using ESD only', value=params['prop_hasu_using_esd_only'])
+params['prop_asu_using_esd'] = st.sidebar.number_input('Proportion ASU using ESD', value=params['prop_asu_using_esd'])
+params['los_hasu_mean'] = st.sidebar.number_input('Mean LOS HASU', value=params['los_hasu_mean'])
+params['los_asu_no_esd_mean'] = st.sidebar.number_input('Mean LOS ASU no ESD', value=params['los_asu_no_esd_mean'])
+params['los_asu_with_esd_mean'] = st.sidebar.number_input('Mean LOS ASU with ESD', value=params['los_asu_with_esd_mean'])
+params['los_esd_mean'] = st.sidebar.number_input('Mean LOS ESD', value=params['los_esd_mean'])
 
 
 
