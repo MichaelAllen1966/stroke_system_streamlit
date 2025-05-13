@@ -25,8 +25,8 @@ st.title('Simple stroke system model')
 
 # Add a description
 
-# Add an image with width 600
-st.image('./images/system_1.png', caption='Flow diagram of the stroke system', width=600)
+# Add an image
+st.image('./images/system_1.png', caption='Flow diagram of the stroke system', width=450)
 
 st.write("""
 This is a simple stroke system model that simulates the flow of patients through a stroke system. The model includes the following components:
