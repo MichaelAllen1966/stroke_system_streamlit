@@ -29,7 +29,7 @@ st.title('Simple stroke system model')
 st.image('./images/system_1.png', caption='Flow diagram of the stroke system', width=350)
 
 st.write("""
-This is a simple stroke system model that simulates the flow of patients through a stroke system. The model includes the following components:
+This is a model that simulates the flow of patients through a simple stroke system:
 - HASU: Hyper Acute Stroke Unit
 - ASU: Acute Stroke Unit
 - ESD: Early Supported Discharge
