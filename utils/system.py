@@ -92,10 +92,10 @@ class System:
         ax.plot(x - 100, y2, color='green', label='asu')
         #ax.plot(x, y3, color='red', label='esd')
 
-        ax.fill_between(x, self.audit_report['Occupied_hasu_beds'].quantile(0.05),
+        ax.fill_between(x - 100, self.audit_report['Occupied_hasu_beds'].quantile(0.05),
                         self.audit_report['Occupied_hasu_beds'].quantile(0.95),
                         color='blue', alpha=0.2)
-        ax.fill_between(x, self.audit_report['Occupied_asu_beds'].quantile(0.05),
+        ax.fill_between(x - 100, self.audit_report['Occupied_asu_beds'].quantile(0.05),
                         self.audit_report['Occupied_asu_beds'].quantile(0.95),
                         color='green', alpha=0.2)
         #ax.fill_between(x, self.audit_report['Occupied_esd_beds'].quantile(0.05),
