@@ -46,7 +46,7 @@ with col_1:
     st.write("""
     This is a model that simulates the flow of patients through a simple stroke system:
     - HASU: Hyper Acute Stroke Unit
-    - ASU: Acute Stroke Unit
+    - ASU: Acute Stroke Unit (may also be known as inpatient rehab)
     - ESD: Early Supported Discharge
             
 
