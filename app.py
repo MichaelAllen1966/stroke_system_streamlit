@@ -67,6 +67,14 @@ with col_2:
         sim_duration = 365 # Duration after warm up
         m.run(warm_up, sim_duration)
 
+        st.write("""The chart below shows bed occupancy in HASU and ASU over a year if beds were 
+                 always available. The coloured blocks show the range of occupancy numbers that will 
+                 cover 90% of bed requirements
+                 """)
+
         st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
+
+        st.write("""The table below describes bed occupancy if beds were always available.
+                 """)
 
         st.write(m.system.audit_report_summary)
