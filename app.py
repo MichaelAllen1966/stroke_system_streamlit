@@ -13,9 +13,9 @@ params = {
     'prop_asu_using_esd': 0.5,
     'los_hasu_mean': 2.0,
     'los_hasu_cv': 0.7,
-    'los_asu_no_esd_mean': 15,
+    'los_asu_no_esd_mean': 28,
     'los_asu_no_esd_cv': 0.7,
-    'los_asu_with_esd_mean': 15,
+    'los_asu_with_esd_mean': 21,
     'los_asu_with_esd_cv': 0.7,
     'los_esd_mean': 20,
     'los_esd_cv': 0.7
