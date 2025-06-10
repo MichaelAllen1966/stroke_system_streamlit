@@ -58,7 +58,7 @@ with col_1:
 
 with col_2:
 
-    if st.button('Run model'):
+    if st.button('Run model', use_container_width=True):
         # Load the model with the parameters
         m = Model(params)
 
@@ -67,4 +67,5 @@ with col_2:
         m.run(warm_up, sim_duration)
 
         st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
+
         st.write(m.system.audit_report_summary)
