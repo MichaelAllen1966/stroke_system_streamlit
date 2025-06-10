@@ -84,7 +84,7 @@ class System:
 
         fig = plt.figure(figsize=(10, 6))
         ax = fig.add_subplot(111)
-        x = self.audit_report['Day']
+        x = self.audit_report['Time']
         y1 = self.audit_report['Occupied_hasu_beds']
         y2 = self.audit_report['Occupied_asu_beds']
         y3 = self.audit_report['Occupied_esd_beds']
@@ -102,7 +102,7 @@ class System:
         #                self.audit_report['Occupied_esd_beds'].quantile(0.95),
         #                color='red', alpha=0.2)
         
-        ax.set_xlabel('Time')
+        ax.set_xlabel('Day')
         ax.set_ylabel('Occupancy (people)')
         txt = "Shaded areas show 5th to 95th percentile occupancy"
         ax.text(0.5, 0.95, txt, ha='center', va='center', transform=ax.transAxes,
