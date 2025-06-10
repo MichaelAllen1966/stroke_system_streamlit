@@ -74,7 +74,7 @@ with col_2:
 
         st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
 
-        st.write("""The table below describes bed occupancy if beds were always available.
+        st.write("""The table below describes bed or ESD occupancy if beds/ESD were always available.
                  """)
 
         st.write(m.system.audit_report_summary)
