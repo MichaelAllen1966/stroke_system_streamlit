@@ -26,13 +26,13 @@ st.title('Simple stroke system model')
 # Add a sidebar to enter parameters
 st.sidebar.title("Model parameters")
 params['admissions_per_year'] = st.sidebar.number_input('Admissions per year', value=params['admissions_per_year'], step=50)
-params['prop_hasu_using_asu'] = st.sidebar.number_input('Proportion HASU patients using ASU', value=params['prop_hasu_using_asu'], step=0.05)
-params['prop_hasu_using_esd_only'] = st.sidebar.number_input('Proportion HASU patients using ESU only', value=params['prop_hasu_using_esd_only'], step=0.05)
+params['prop_hasu_using_asu'] = st.sidebar.number_input('Proportion HASU patients using ASU (with or without ESD)', value=params['prop_hasu_using_asu'], step=0.05)
+params['prop_hasu_using_esd_only'] = st.sidebar.number_input('Proportion HASU patients using ESU only (no ASU use)', value=params['prop_hasu_using_esd_only'], step=0.05)
 params['prop_asu_using_esd'] = st.sidebar.number_input('Proportion ASU patients using ESD', value=params['prop_asu_using_esd'], step=0.05)
-params['los_hasu_mean'] = st.sidebar.number_input('Mean LOS (days) in HASU', value=params['los_hasu_mean'], step=0.5)
-params['los_asu_no_esd_mean'] = st.sidebar.number_input('Mean LOS (days) in ASU without ESD', value=params['los_asu_no_esd_mean'])
-params['los_asu_with_esd_mean'] = st.sidebar.number_input('Mean LOS (days) in ASU with ESD', value=params['los_asu_with_esd_mean'])
-params['los_esd_mean'] = st.sidebar.number_input('Mean LOS (days) in ESD', value=params['los_esd_mean'])
+params['los_hasu_mean'] = st.sidebar.number_input('Mean LoS (days) in HASU', value=params['los_hasu_mean'], step=0.5)
+params['los_asu_no_esd_mean'] = st.sidebar.number_input('Mean LoS (days) in ASU without ESD', value=params['los_asu_no_esd_mean'])
+params['los_asu_with_esd_mean'] = st.sidebar.number_input('Mean LoS (days) in ASU with ESD', value=params['los_asu_with_esd_mean'])
+params['los_esd_mean'] = st.sidebar.number_input('Mean LoS (days) in ESD', value=params['los_esd_mean'])
 
 # Add a description
 
