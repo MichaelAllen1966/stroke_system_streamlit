@@ -84,12 +84,12 @@ class System:
 
         fig = plt.figure(figsize=(10, 6))
         ax = fig.add_subplot(111)
-        x = self.audit_report['Time']
+        x = self.audit_report['Day']
         y1 = self.audit_report['Occupied_hasu_beds']
         y2 = self.audit_report['Occupied_asu_beds']
         y3 = self.audit_report['Occupied_esd_beds']
-        ax.plot(x, y1, color='blue', label='hasu')
-        ax.plot(x, y2, color='green', label='asu')
+        ax.plot(x - 100, y1, color='blue', label='hasu')
+        ax.plot(x - 100, y2, color='green', label='asu')
         #ax.plot(x, y3, color='red', label='esd')
 
         ax.fill_between(x, self.audit_report['Occupied_hasu_beds'].quantile(0.05),
