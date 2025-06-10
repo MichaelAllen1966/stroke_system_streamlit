@@ -39,7 +39,6 @@ Patients are admitted to the HASU and then may be transferred to the ASU. The mo
 - The length of stay (LOS) for each component is defined by a mean (a log-normal distribution with 70% CV is applied to add typical variation in LOS).
 - The model parameters can be adjusted using the sidebar.
 - The model is run by clicking the "Run model" button (clicking again will simulate another year).
-- The model generates a bed occupancy report and an audit report summary.
 """)
 
 # Add a box to enter admissions_per_year
