@@ -103,7 +103,7 @@ class System:
         #                color='red', alpha=0.2)
         
         ax.set_xlabel('Day')
-        ax.set_ylabel('Occupancy (people)')
+        ax.set_ylabel('Bed occupancy (people)')
         txt = "Shaded areas show 5th to 95th percentile occupancy"
         ax.text(0.5, 0.95, txt, ha='center', va='center', transform=ax.transAxes,
             bbox=dict(facecolor='white', alpha=0.5))
