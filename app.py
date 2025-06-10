@@ -36,7 +36,7 @@ This is a simple stroke system model that simulates the flow of patients through
          
 
 Patients are admitted to the HASU and then may be transferred to the ASU. The model simulates the flow of patients through these components and generates a bed occupancy report and an audit report summary.
-- The length of stay (LOS) for each component is defined by a mean and a coefficient of variation (CV).
+- The length of stay (LOS) for each component is defined by a mean (a log-normal distribution with 70% CV is applied to add typical variation in LOS).
 - The model parameters can be adjusted using the sidebar.
 - The model is run by clicking the "Run model" button (clicking again will simulate another year).
 - The model generates a bed occupancy report and an audit report summary.
