@@ -35,7 +35,7 @@ This is a model that simulates the flow of patients through a simple stroke syst
 - ESD: Early Supported Discharge
          
 
-Patients are admitted to the HASU and then may be transferred to the ASU. The model simulates the flow of patients through these components and generates a bed occupancy report and an audit report summary.
+Patients are admitted to the HASU and then may be transferred to the ASU. The model simulates the flow of patients through HASU, ASU and ESD.
 - The length of stay (LOS) for each component is defined by a mean (a log-normal distribution with 70% CV is applied to add typical variation in LOS).
 - The model parameters can be adjusted using the sidebar.
 - The model is run by clicking the "Run model" button (clicking again will simulate another year).
