@@ -36,7 +36,7 @@ params['los_esd_mean'] = st.sidebar.number_input('Mean LoS (days) in ESD', value
 
 # Add a description
 
-col_1, col_2 = st.columns(2, gap="large"))
+col_1, col_2 = st.columns(2, gap="large")
 
 with col_1:
 
