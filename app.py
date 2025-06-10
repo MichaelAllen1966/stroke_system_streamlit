@@ -23,7 +23,7 @@ params = {
 
 st.title('Simple stroke system model')
 
-# Add a box to enter parameters
+# Add a sidebar to enter parameters
 st.sidebar.title("Model parameters")
 params['admissions_per_year'] = st.sidebar.number_input('Admissions per year', value=params['admissions_per_year'], step=50)
 params['prop_hasu_using_asu'] = st.sidebar.number_input('Proportion HASU patients using ASU', value=params['prop_hasu_using_asu'], step=0.05)
@@ -56,9 +56,7 @@ with col_1:
     - The model is run by clicking the "Run model" button (clicking again will simulate another year).
     """)
 
-
 with col_2:
-
 
     if st.button('Run model'):
         # Load the model with the parameters
@@ -70,5 +68,3 @@ with col_2:
 
         st.image('./output/bed_occupancy.png', caption='Bed Occupancy', use_container_width=True)
         st.write(m.system.audit_report_summary)
-
-
