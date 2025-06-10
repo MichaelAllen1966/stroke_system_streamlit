@@ -52,11 +52,12 @@ with col_1:
 
     Patients are admitted to the HASU and then may be transferred to the ASU. The model simulates the flow of patients through HASU, ASU and ESD.
     - The length of stay (LOS) for each component is defined by a mean (a log-normal distribution with 70% CV is applied to add typical variation in LOS).
-    - The model parameters can be adjusted using the sidebar.
-    - The model is run by clicking the "Run model" button (clicking again will simulate another year).
     """)
 
 with col_2:
+
+    st.write("""To run the model, adjust parameters in the sidebar, and click 'Run Model' (clicking again will simulate another year).  
+        """)
 
     if st.button('Run model', use_container_width=True):
         # Load the model with the parameters
